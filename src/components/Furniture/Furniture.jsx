@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import furnitureImg from '../../assets/mobila.jpeg'
 const FurnitureSection = styled.section`
   width: 100%;
   height: 870px;
   position: relative;
 
   & .furniture__background {
-    background-image: url(https://firstconcept.ro/assets/Mobila-BD4u36Ar.jpeg);
+    background-image: url(${furnitureImg});
     background-color: rgb(60, 68, 67);
     background-blend-mode: hard-light;
     background-position: center center;

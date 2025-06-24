@@ -13,8 +13,8 @@ import MainImg from "../../assets/MainImg.jpeg";
 import useismobile from "./useismobile";
 
 const BUTTONS = [
-  { text: "Afla mai multe", href: "#", primary: false },
-  { text: "Cere oferta", href: "#", primary: true },
+  { text: "Afla mai multe", href: "#poveste", primary: false },
+  { text: "Cere oferta", href: "#contact", primary: true },
 ];
 
 export default function Main() {

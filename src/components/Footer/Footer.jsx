@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { ContactForm } from "./Form";
+import ANPCLogo from "../../assets/ANPC.jpg";
 
 const FooterSection = styled.section`
+  padding: 4rem 0;
   & .footer__section--container {
     width: 80%;
     max-width: 1175px;
@@ -85,7 +87,7 @@ const FooterSection = styled.section`
 
 export default function Footer() {
   return (
-    <FooterSection>
+    <FooterSection id="contact">
       <div className="footer__section--container">
         <div>
           <a href="tel:0740931969">
@@ -95,6 +97,13 @@ export default function Footer() {
           <a href="mailto:contact@firstconcept.ro">
             <FontAwesomeIcon icon={faEnvelope} />
             contact@firstconcept.ro
+          </a>
+          <a href="">
+            <img
+              style={{ width: "180px", marginTop: "2rem" }}
+              src={ANPCLogo}
+              alt=""
+            />
           </a>
         </div>
         <ContactForm />

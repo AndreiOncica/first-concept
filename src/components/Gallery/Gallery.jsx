@@ -28,7 +28,7 @@ export default function Gallery() {
   
 
   return (
-    <div>
+    <div id="proiecte">
       <div className="project-carousel">
         {Object.entries(projects).map(([folder, images]) => (
           <div

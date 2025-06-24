@@ -89,7 +89,7 @@ export default function Prices() {
   }, [showModal]);
 
   return (
-    <PricesSection>
+    <PricesSection id="preturi">
       <div className="prices__section--container">
         <div className="prices__title">PRETURI</div>
         <div className="prices__text">
