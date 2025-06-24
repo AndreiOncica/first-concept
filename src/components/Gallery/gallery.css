@@ -1,0 +1,115 @@
+/* Limit the height of the main image to 70% of the viewport */
+.image-gallery-slide .image-gallery-image {
+    max-height: 70vh !important;
+    object-fit: contain;
+}
+
+/* Make the thumbnail list take up 20% of the viewport */
+.image-gallery-thumbnails-wrapper {
+    max-height: 15vh !important;
+    overflow-y: auto;
+}
+
+.image-gallery-thumbnail {
+    height: 64px !important;
+}
+
+.project-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 16px;
+    padding: 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+
+.project-carousel:active {
+    cursor: grabbing;
+}
+
+.project-card {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 600px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+    scroll-snap-align: start;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .project-card {
+        width: 150px;
+        height: 300px;
+    }
+
+    .card-title {
+        /* height: auto; */
+        font-size: 14px;
+        height: 80px;
+    }
+}
+
+/* Lightbox styling */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.lightbox-content {
+    width: 100%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow: auto;
+    background-color: #111;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* React Image Gallery overrides */
+.image-gallery-slide .image-gallery-image {
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.image-gallery-thumbnails-wrapper {
+    max-height: 20vh;
+    overflow-y: auto;
+}
+
+.image-gallery-content {
+    max-height: 90vh;
+}
